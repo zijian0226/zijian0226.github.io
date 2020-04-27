@@ -1,4 +1,5 @@
 ## Welcome to GitHub Pages
+[Test password](https://zijian0226.github.io/password.html)
 
 You can use the [editor on GitHub](https://github.com/zijian0226/zijian0226.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown [files](https://zijian0226.github.io/file2.html).
 
