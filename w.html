@@ -32,12 +32,12 @@ function timedCount(a,b){
 	node.style.color='black';
 	node.innerHTML=Math.floor(Math.random()*(a-b+1))+Number(b);
 	c=c+1;
-	if(c==15){
+	if(c==50){
 		stopCount();
 		c=0;
 		node.style.color='red';
 	}else
-	t=setTimeout("timedCount(a,b)",200)
+	t=setTimeout("timedCount(a,b)",50)
 }
 function stopCount(){
 	clearTimeout(t)
