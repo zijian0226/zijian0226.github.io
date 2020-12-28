@@ -1,0 +1,136 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+<title>随机数抽取器,在线抽号工具 - 千千秀字</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<style>
+#out {
+	font: 100px Arial, Helvetica, sans-serif;
+	text-align: center;
+	background: #fff;
+}
+#num {
+	width: 100px;
+	border: 1px solid #ccc;
+	padding: 4px;
+	box-sizing: border-box;
+}
+#num:hover {
+	border-color: #999;
+}
+#num:focus {
+	border-color: #59f;
+}
+</style>
+<script>
+var c=0,t;
+function timedCount(a,b){
+	var node=document.getElementById('out');
+	node.style.color='black';
+	node.innerHTML=Math.floor(Math.random()*(a-b+1))+Number(b);
+	c=c+1;
+	if(c==15){
+		stopCount();
+		c=0;
+		node.style.color='red';
+	}else
+	t=setTimeout("timedCount(a,b)",50)
+}
+function stopCount(){
+	clearTimeout(t)
+}
+function getNum(){
+	var nr=document.getElementById('num').value;
+	if(!/^\d{1,6}-\d{1,6}$/.test(nr)) return alert('输入有误，格式如：1-100，范围0至999999之间的整数。');
+	arr=nr.split("-");
+	a=0,b=0;
+	if(arr[0]>arr[1]){
+		a=arr[0];
+		b=arr[1];
+	}else if(arr[1]>arr[0]){
+		a=arr[1];
+		b=arr[0];
+	}else{
+		document.getElementById('out').innerHTML=arr[0];
+		return
+	}
+	timedCount(a,b)
+}
+document.onkeydown = function(e){
+    var keyCode = window.event ? e.keyCode : e.which;
+	if(13==keyCode){
+		getNum();
+		document.getElementById('num').blur();
+	}
+}
+window.onresize = function() {
+	var isFull=!!(document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement);
+	var the=document.getElementById('out').style;
+	if (isFull==false) {
+		the.position='';
+		the.width='';
+		the.height='';
+		the.fontSize='100px';
+		the.lineHeight='';
+		document.body.parentNode.style.overflow='auto';
+	}else{
+		the.position='fixed';
+		the.width='100%';
+		the.height='100%';
+		the.fontSize='50vh';
+		the.lineHeight='100vh';
+		the.top=0;
+		the.left=0;
+		document.body.parentNode.style.overflow='hidden';
+	}
+}
+function fullScreen(e) {
+	e.blur();
+    var element = document.documentElement;
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+    }
+}
+</script>
+<script src="/js/head.js"></script>
+</head>
+<body> 
+<div class="top"><div class="home"><a href="https://www.qqxiuzi.cn"><b><font color="#F8673D">千</font><font color="#E79C01">千</font><font color="#0EBB00">秀</font><font color="#669FFF">字</font></b></a></div><div class="nav"><a href="https://www.qqxiuzi.cn/daohang.htm">网站导航</a></div><div style="clear:both;"></div></div>
+<div class="main">
+  <div class="title"><h1>随机数抽取</h1></div>
+  <div class="ad"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2440711871479504"
+     data-ad-slot="8604148262"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div> 
+    <div id="out">0</div>
+    <p align="center"><input type="text" id="num" value="1-999" placeholder="数字范围">
+    <input onclick="getNum()" type="button" value="抽取"></p>
+      <p>在输入框中填写数字范围，然后点击抽取即可（按回车键亦可）。</p>
+      <div id="screen">
+      <input onclick="fullScreen(this)" type="button" value="全屏">
+      <p>点击全屏按钮进入全屏模式，使用回车键抽取数字。</p>
+      </div>
+      <p>随机抽号基于内置的随机数发生器，在预设数字范围内，采用平均分布的抽取方式产生一个随机数。人的主观意念认为数字范围的最小端和最大端抽取到的概率更低，实际上它们和中间段数字出现的概率相同。</p>
+      <p>该页面作为一个通用的抽号在线工具，供需要的用户使用。注意：抽号工具并未去重，即在一个周期内可能抽取到重复的数字。</p>
+      <p>相关页面：<a href="/zh/suiji.htm">随机抽取工具</a></p>
+</div>
+<div class="foot">QQXIUZI.CN　<a href="https://www.qqxiuzi.cn">千千秀字</a></div>
+<script>
+if(/(Android|iOS|iPhone|iPad)/i.test(navigator.userAgent)) document.getElementById('screen').style.display='none';
+</script>
+</body>
+</html>
