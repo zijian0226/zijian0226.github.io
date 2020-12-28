@@ -89,6 +89,7 @@ window.onresize = function() {
 }
 function fullScreen(e) {
 	e.blur();
+    var element = document.documentElement;
     if (element.requestFullscreen) {
         element.requestFullscreen();
     } else if (element.msRequestFullscreen) {
