@@ -32,7 +32,7 @@ function timedCount(a,b){
 	node.style.color='black';
 	node.innerHTML=Math.floor(Math.random()*(a-b+1))+Number(b);
 	c=c+1;
-	if(c==50){
+	if(c==45){
 		stopCount();
 		c=0;
 		node.style.color='red';
@@ -89,7 +89,8 @@ window.onresize = function() {
 }
 function fullScreen(e) {
 	e.blur();
-    var element = document.documentElement;
+    
+    document.getElementById("demo").innerHTML = 5 + 6;
     if (element.requestFullscreen) {
         element.requestFullscreen();
     } else if (element.msRequestFullscreen) {
