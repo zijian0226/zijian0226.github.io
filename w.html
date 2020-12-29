@@ -109,15 +109,15 @@ function fullScreen(e) {
     <p id="p1" style="font-size:50px;text-align:center;color:red"><strong class="red">我要在中间</strong></p>
  
     <div id="out">0</div>
-    <p align="center"><input type="text" id="num" value="1-999" placeholder="数字范围">
-    <input onclick="getNum()" type="button" value="抽取"></p>
-      <p>在输入框中填写数字范围，然后点击抽取即可（按回车键亦可）。</p>
-      <div id="screen">
-      <input onclick="fullScreen(this)" type="button" value="全屏">
-      <p>点击全屏按钮进入全屏模式，使用回车键抽取数字。</p>
-      </div>
-      <p>随机抽号基于内置的随机数发生器，在预设数字范围内，采用平均分布的抽取方式产生一个随机数。人的主观意念认为数字范围的最小端和最大端抽取到的概率更低，实际上它们和中间段数字出现的概率相同。</p>
-      <p>该页面作为一个通用的抽号在线工具，供需要的用户使用。注意：抽号工具并未去重，即在一个周期内可能抽取到重复的数字。</p>
+    //<p align="center"><input type="text" id="num" value="1-999" placeholder="数字范围">
+    //<input onclick="getNum()" type="button" value="抽取"></p>
+      //<p>在输入框中填写数字范围，然后点击抽取即可（按回车键亦可）。</p>
+      //<div id="screen">
+      //<input onclick="fullScreen(this)" type="button" value="全屏">
+      //<p>点击全屏按钮进入全屏模式，使用回车键抽取数字。</p>
+      //</div>
+      //<p>随机抽号基于内置的随机数发生器，在预设数字范围内，采用平均分布的抽取方式产生一个随机数。人的主观意念认为数字范围的最小端和最大端抽取到的概率更低，实际上它们和中间段数字出现的概率相同。</p>
+      //<p>该页面作为一个通用的抽号在线工具，供需要的用户使用。注意：抽号工具并未去重，即在一个周期内可能抽取到重复的数字。</p>
       
 <script>
 if(/(Android|iOS|iPhone|iPad)/i.test(navigator.userAgent)) document.getElementById('screen').style.display='none';
