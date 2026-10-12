@@ -2,7 +2,7 @@
 
 <style>
   .china-flag {
-    position: absolute;
+    position: fixed;
     top: 64px;
     right: 20px;
     width: 90px;
