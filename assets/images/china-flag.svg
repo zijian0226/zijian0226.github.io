@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 30 20">
+  <title>中国国旗</title>
+  <rect width="30" height="20" fill="#de2910"/>
+  <defs>
+    <path id="star" d="M0,-1 L0.224514,-0.309017 L0.951057,-0.309017 L0.363271,0.118034 L0.587785,0.809017 L0,0.381966 L-0.587785,0.809017 L-0.363271,0.118034 L-0.951057,-0.309017 L-0.224514,-0.309017 Z"/>
+  </defs>
+  <g fill="#ffde00">
+    <use href="#star" transform="translate(5 5) scale(3)"/>
+    <use href="#star" transform="translate(10 2) rotate(-120.963757)"/>
+    <use href="#star" transform="translate(12 4) rotate(-98.130102)"/>
+    <use href="#star" transform="translate(12 7) rotate(-74.054604)"/>
+    <use href="#star" transform="translate(10 9) rotate(-51.340192)"/>
+  </g>
+</svg>

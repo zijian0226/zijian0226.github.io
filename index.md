@@ -1,3 +1,28 @@
+<img class="china-flag" src="{{ '/assets/images/china-flag.svg' | relative_url }}" alt="中国国旗" width="90" height="60">
+
+<style>
+  .china-flag {
+    position: absolute;
+    top: 64px;
+    right: 20px;
+    width: 90px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    z-index: 10;
+  }
+
+  @media (max-width: 480px) {
+    .china-flag {
+      right: 12px;
+      width: 60px;
+      height: 40px;
+    }
+  }
+</style>
+
 ## Welcome to GitHub Pages
 [Test password](https://zijian0226.github.io/password.html)
 [num](https://zijian0226.github.io/w.html)
